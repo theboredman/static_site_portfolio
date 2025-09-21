@@ -1,0 +1,40 @@
+# GitHub Pages Configuration
+
+# This file ensures GitHub Pages builds correctly
+# The site is generated in the /docs folder
+# 
+# To deploy:
+# 1. Run: npm run build
+# 2. Commit and push the docs/ folder
+# 3. GitHub Pages will serve from /docs automatically
+
+# Site metadata
+title: "Asadullah Hil Galib - AI & ML Developer"
+description: "Portfolio website showcasing AI, Machine Learning, and Web Development projects"
+author: "Asadullah Hil Galib"
+email: "imgalibb@gmail.com"
+
+# GitHub Pages settings
+github:
+  repository_name: "portfolio_website"
+  owner_name: "theboredman"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude from processing
+exclude:
+  - node_modules/
+  - package*.json
+  - server.js
+  - routes/
+  - views/
+  - generate-static.js
+  - README.md

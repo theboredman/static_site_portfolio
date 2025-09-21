@@ -1,0 +1,516 @@
+/* ==========================================================================
+   Form Styles - Contact Forms and Input Components
+   ========================================================================== */
+
+/* ==========================================================================
+   Form Layout
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.form-container {
+  background: var(--white);
+  padding: var(--space-8);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.form-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.form-description {
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+/* ==========================================================================
+   Form Groups and Fields
+   ========================================================================== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: var(--space-6);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-700);
+  margin-bottom: var(--space-2);
+  transition: color var(--transition-fast);
+}
+
+.form-group.focused .form-label {
+  color: var(--primary);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: var(--space-4);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--gray-900);
+  background: var(--white);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal);
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--gray-400);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ==========================================================================
+   Form Validation and Errors
+   ========================================================================== */
+
+.form-error {
+  display: none;
+  font-size: var(--font-size-sm);
+  color: var(--error);
+  margin-top: var(--space-2);
+  padding-left: var(--space-1);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-error::before {
+  content: '⚠ ';
+  margin-right: var(--space-1);
+}
+
+.character-count {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  text-align: right;
+  margin-top: var(--space-1);
+  font-weight: var(--font-weight-medium);
+}
+
+.character-count.warning {
+  color: var(--warning);
+}
+
+/* ==========================================================================
+   Form Results and Messages
+   ========================================================================== */
+
+.form-result {
+  padding: var(--space-4);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--space-4);
+  animation: slideInDown 0.3s ease-out;
+}
+
+.form-result.success {
+  background: var(--success);
+  color: var(--white);
+  border-left: 4px solid var(--accent);
+}
+
+.form-result.error {
+  background: var(--error);
+  color: var(--white);
+  border-left: 4px solid #dc2626;
+}
+
+.form-result.info {
+  background: var(--info);
+  color: var(--white);
+  border-left: 4px solid var(--primary-dark);
+}
+
+/* ==========================================================================
+   Submit Button States
+   ========================================================================== */
+
+.btn-loading {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.btn.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn.success {
+  background: linear-gradient(135deg, var(--success), var(--accent));
+}
+
+.btn-icon {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(2px);
+}
+
+/* ==========================================================================
+   Contact Information Section
+   ========================================================================== */
+
+.contact-info {
+  background: linear-gradient(135deg, var(--gray-50), var(--gray-100));
+  padding: var(--space-8);
+  border-radius: var(--border-radius-xl);
+  height: fit-content;
+  border: 1px solid var(--gray-200);
+}
+
+.info-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.info-description {
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.contact-methods {
+  margin-bottom: var(--space-8);
+}
+
+.contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: var(--white);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--gray-200);
+}
+
+.contact-method:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.method-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.method-content {
+  flex: 1;
+}
+
+.method-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.method-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.method-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.method-text {
+  color: var(--gray-600);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ==========================================================================
+   Response and Availability Info
+   ========================================================================== */
+
+.response-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--white);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--gray-200);
+}
+
+.response-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.response-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.response-text {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-indicator.available {
+  background: var(--success);
+}
+
+.status-indicator.busy {
+  background: var(--warning);
+}
+
+.status-indicator.unavailable {
+  background: var(--error);
+}
+
+.status-text {
+  color: var(--gray-700);
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+
+.faq-section {
+  margin-top: var(--space-20);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.faq-item {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-tight);
+}
+
+.faq-answer {
+  color: var(--gray-600);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.form-group.error {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   Mobile Responsiveness
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .form-container,
+  .contact-info {
+    padding: var(--space-6);
+  }
+  
+  .contact-methods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .contact-method {
+    padding: var(--space-3);
+  }
+  
+  .method-icon {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: var(--space-4);
+  }
+  
+  .form-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+  
+  .method-icon {
+    align-self: center;
+  }
+}
+
+/* ==========================================================================
+   High Contrast Mode Support
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+  .form-input,
+  .form-textarea {
+    border-width: 3px;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-width: 3px;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  }
+  
+  .form-error {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .contact-form,
+  .form-container {
+    display: none;
+  }
+  
+  .contact-info {
+    box-shadow: none;
+    border: 2px solid var(--gray-300);
+  }
+  
+  .contact-methods {
+    display: block;
+  }
+  
+  .contact-method {
+    margin-bottom: var(--space-4);
+    padding: var(--space-2);
+    border: 1px solid var(--gray-300);
+  }
+}

@@ -1,0 +1,352 @@
+/* ==========================================================================
+   Responsive Design - Mobile-First Approach
+   ========================================================================== */
+
+/* ==========================================================================
+   Mobile Base Styles (< 768px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-6xl: 2.5rem;
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.75rem;
+    --font-size-3xl: 1.5rem;
+  }
+  
+  /* Container */
+  .container {
+    padding: 0 var(--space-4);
+  }
+  
+  /* Hero Section */
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+    min-height: 90vh;
+  }
+  
+  .hero-text {
+    order: 2;
+  }
+  
+  .hero-visual {
+    order: 1;
+  }
+  
+  .hero-image {
+    height: 300px;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .floating-card {
+    display: none;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .project-card.featured {
+    grid-column: span 1;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  /* About Content */
+  .about-hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+  
+  .about-text {
+    order: 2;
+  }
+  
+  .about-image {
+    order: 1;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .contact-form-section {
+    order: 2;
+  }
+  
+  .contact-info-section {
+    order: 1;
+  }
+  
+  /* Forms */
+  .hero-actions,
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Navigation adjustments */
+  .nav-container {
+    padding: 0 var(--space-4);
+  }
+  
+  /* Section padding */
+  .section {
+    padding: var(--space-12) 0;
+  }
+  
+  .featured-projects,
+  .skills-preview,
+  .cta-section {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ==========================================================================
+   Tablet Styles (768px - 1024px)
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Hero adjustments */
+  .hero-content {
+    gap: var(--space-12);
+  }
+  
+  .hero-image {
+    height: 350px;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .project-card.featured {
+    grid-column: span 2;
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  /* About Grid */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .experience-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  /* Contact adjustments */
+  .contact-methods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Desktop Styles (> 1024px)
+   ========================================================================== */
+
+@media (min-width: 1025px) {
+  /* Large containers */
+  .container {
+    max-width: 1400px;
+  }
+  
+  /* Hero enhancements */
+  .hero-content {
+    gap: var(--space-20);
+  }
+  
+  .hero-image {
+    height: 450px;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+  
+  /* Skills enhancements */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  /* Enhanced hover effects */
+  .project-card:hover {
+    transform: translateY(-12px);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* ==========================================================================
+   Large Desktop Styles (> 1440px)
+   ========================================================================== */
+
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .hero-background,
+  .floating-cards,
+  .hero-actions,
+  .navbar,
+  .footer,
+  .scroll-indicator {
+    display: none !important;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .project-card,
+  .skill-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--gray-300);
+  }
+}
+
+/* ==========================================================================
+   High DPI / Retina Displays
+   ========================================================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize for high DPI displays */
+  .hero-image,
+  .project-image img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .scroll-mouse::before {
+    animation: none;
+  }
+  
+  .brand-dot {
+    animation: none;
+  }
+  
+  .hero-pattern {
+    animation: none;
+  }
+  
+  .floating-card {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   Dark Mode Support (Future Enhancement)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Dark mode variables can be added here for future enhancement */
+}
+
+/* ==========================================================================
+   Focus Improvements
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  .project-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .skill-card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* ==========================================================================
+   Landscape Mobile Adjustments
+   ========================================================================== */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 80vh;
+  }
+  
+  .hero-content {
+    min-height: 70vh;
+  }
+  
+  .hero-image {
+    height: 250px;
+  }
+}
