@@ -16,7 +16,7 @@ email: "imgalibb@gmail.com"
 
 # GitHub Pages settings
 github:
-  repository_name: "portfolio_website"
+  repository_name: "static_site_portfolio"
   owner_name: "theboredman"
 
 # Build settings
