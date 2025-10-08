@@ -1,0 +1,31 @@
+{
+  "name": "theboredman-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Modern, sleek, and intelligent personal portfolio website for theboredman (Asadullah Hil Galib) - Static site for GitHub Pages",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/theboredman-portfolio/",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.8"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site",
+    "github-pages",
+    "tailwindcss",
+    "ai-developer",
+    "machine-learning",
+    "vanilla-js"
+  ],
+  "author": "theboredman (Asadullah Hil Galib)",
+  "license": "MIT"
+}
