@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCS &#x09AC;&#x09BE;&#x09A4;&#x09BF;&#x0998;&#x09B0; &#x2014; KG Pipeline Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f172a;--bg2:#1e293b;--card:#1e293b;--card-h:#334155;--t1:#f1f5f9;--t2:#94a3b8;--t3:#64748b;--blue:#3b82f6;--purple:#8b5cf6;--green:#22c55e;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4;--pink:#ec4899;--bdr:#334155;--r:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Hind Siliguri',sans-serif;background:var(--bg);color:var(--t1);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:4px}
+.hdr{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#4c1d95 100%);padding:40px 0 30px;text-align:center;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23fff' fill-opacity='.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:.5}
+.hdr h1{font-size:2.5rem;font-weight:800;background:linear-gradient(to right,#e0e7ff,#c7d2fe,#a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative}
+.hdr .sub{color:#a5b4fc;font-size:1.1rem;margin-top:8px;position:relative}
+.hdr .team{margin-top:16px;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;position:relative}
+.tm{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:8px 20px;border-radius:50px;font-size:.85rem;color:#c7d2fe;backdrop-filter:blur(4px)}
+.tm b{color:#e0e7ff}
+nav{background:var(--bg2);border-bottom:1px solid var(--bdr);padding:0 20px;position:sticky;top:0;z-index:100;display:flex;overflow-x:auto;scrollbar-width:thin}
+nav a{padding:14px 20px;color:var(--t2);text-decoration:none;font-size:.85rem;font-weight:500;border-bottom:2px solid transparent;transition:.2s;white-space:nowrap;cursor:pointer}
+nav a:hover,nav a.on{color:var(--blue);border-bottom-color:var(--blue);background:rgba(59,130,246,.05)}
+.wrap{max-width:1440px;margin:0 auto;padding:30px 20px}
+.sec{display:none;animation:fadeIn .3s ease}.sec.on{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.stitle{font-size:1.5rem;font-weight:700;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:30px}
+.sc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:20px;text-align:center;transition:.2s}
+.sc:hover{background:var(--card-h);transform:translateY(-2px);box-shadow:0 4px 6px -1px rgba(0,0,0,.3)}
+.sc .v{font-size:2.2rem;font-weight:800;line-height:1.2}
+.sc .l{font-size:.8rem;color:var(--t2);margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px;margin-bottom:30px}
+.cc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:24px}
+.cc h3{font-size:1rem;color:var(--t2);margin-bottom:16px;font-weight:600}
+#kgBox{width:100%;height:600px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:20px}
+.kgctrl{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.kgctrl label{color:var(--t2);font-size:.85rem}
+.kgctrl select,.kgctrl input{background:var(--card);border:1px solid var(--bdr);color:var(--t1);padding:8px 12px;border-radius:8px;font-size:.85rem}
+.kgl{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.kgl span{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--t2)}
+.kldot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:rgba(59,130,246,.1);color:var(--blue);text-align:left;padding:12px 16px;font-weight:600;white-space:nowrap;position:sticky;top:0;cursor:pointer}
+thead th:hover{background:rgba(59,130,246,.2)}
+tbody td{padding:10px 16px;border-top:1px solid var(--bdr);color:var(--t1);max-width:420px;overflow:hidden;text-overflow:ellipsis}
+tbody tr:hover{background:var(--card-h)}
+.badge{display:inline-block;padding:2px 10px;border-radius:50px;font-size:.75rem;font-weight:600}
+.b-a{background:rgba(34,197,94,.15);color:#4ade80}.b-r{background:rgba(245,158,11,.15);color:#fbbf24}.b-j{background:rgba(239,68,68,.15);color:#f87171}.b-s{background:rgba(139,92,246,.15);color:#a78bfa}
+.sbar{width:100%;padding:12px 16px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);color:var(--t1);font-size:.95rem;margin-bottom:16px;outline:none;transition:.2s}
+.sbar:focus{border-color:var(--blue)}.sbar::placeholder{color:var(--t3)}
+.fr{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.chip{padding:6px 14px;border-radius:50px;font-size:.8rem;cursor:pointer;border:1px solid var(--bdr);background:var(--card);color:var(--t2);transition:.2s}
+.chip:hover,.chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.pf{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0;align-items:center}
+.ps{background:var(--card);border:1px solid var(--bdr);padding:12px 18px;border-radius:var(--r);font-size:.8rem;text-align:center;min-width:120px;transition:.2s}
+.ps:hover{background:var(--card-h);transform:scale(1.05)}
+.ps .n{font-size:1.5rem;font-weight:800;color:var(--blue)}
+.ps .nm{color:var(--t2);margin-top:4px}
+.pa{font-size:1.2rem;color:var(--t3)}
+.stabs{display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid var(--bdr)}
+.stab{padding:10px 20px;cursor:pointer;color:var(--t3);font-size:.85rem;border-bottom:2px solid transparent;transition:.2s}
+.stab:hover,.stab.on{color:var(--purple);border-bottom-color:var(--purple)}
+.scont{display:none}.scont.on{display:block}
+.pb{width:100%;height:8px;background:var(--bdr);border-radius:4px;overflow:hidden}
+.pfl{height:100%;border-radius:4px}
+.ftr{text-align:center;padding:30px;color:var(--t3);font-size:.8rem;border-top:1px solid var(--bdr);margin-top:40px}
+@media(max-width:768px){.hdr h1{font-size:1.5rem}.sg{grid-template-columns:repeat(2,1fr)}.cg{grid-template-columns:1fr}nav a{padding:10px 12px;font-size:.75rem}#kgBox{height:400px}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>&#x1F4DA; BCS &#x09AC;&#x09BE;&#x09A4;&#x09BF;&#x0998;&#x09B0; &#x2014; Knowledge Graph Pipeline</h1>
+  <div class="sub">&#x09AA;&#x09A5; &#x09A6;&#x09C7;&#x0996;&#x09BE;&#x09DF; &#x09AA;&#x09CD;&#x09B0;&#x09B8;&#x09CD;&#x09A4;&#x09C1;&#x09A4;&#x09BF;&#x09B0; &bull; Interactive Pipeline Dashboard</div>
+  <div class="team">
+    <span class="tm">&#x1F9E0; <b>Souvik</b> &#x2014; KG Schema &amp; Construction</span>
+    <span class="tm">&#x1F4BE; <b>Saif</b> &#x2014; Episodic Memory Layer</span>
+    <span class="tm">&#x2705; <b>Galib</b> &#x2014; Fact Quality Gate</span>
+  </div>
+</div>
+
+<nav id="nav">
+  <a data-s="overview" class="on">&#x1F3E0; Overview</a>
+  <a data-s="kg">&#x1F578;&#xFE0F; Knowledge Graph</a>
+  <a data-s="facts">&#x1F4CB; Fact Explorer</a>
+  <a data-s="quality">&#x2705; Quality Gate</a>
+  <a data-s="topics">&#x1F4CA; Topic Analysis</a>
+  <a data-s="memory">&#x1F9E0; Episodic Memory</a>
+  <a data-s="entities">&#x1F465; Entities</a>
+  <a data-s="architecture">&#x2699;&#xFE0F; Architecture</a>
+  <a data-s="data">&#x1F4C2; Raw Data</a>
+</nav>
+
+<div class="wrap">
+
+<div class="sec on" id="s-overview">
+  <h2 class="stitle">&#x1F4CA; Pipeline Overview</h2>
+  <div class="sg" id="overviewCards"></div>
+  <div class="cg">
+    <div class="cc"><h3>&#x1F4CA; Node Type Distribution</h3><canvas id="c-nodeType"></canvas></div>
+    <div class="cc"><h3>&#x1F517; Edge Type Distribution</h3><canvas id="c-edgeType"></canvas></div>
+  </div>
+  <div class="cg">
+    <div class="cc"><h3>&#x2705; Quality Gate Results</h3><canvas id="c-qualPie"></canvas></div>
+    <div class="cc"><h3>&#x1F4DD; MCQ Suitability Breakdown</h3><canvas id="c-mcq"></canvas></div>
+  </div>
+</div>
+
+<div class="sec" id="s-kg">
+  <h2 class="stitle">&#x1F578;&#xFE0F; Interactive Knowledge Graph</h2>
+  <div class="kgl">
+    <span><span class="kldot" style="background:#4A90D9"></span> Entity</span>
+    <span><span class="kldot" style="background:#F5A623"></span> Fact</span>
+    <span><span class="kldot" style="background:#7ED321"></span> Source</span>
+    <span><span class="kldot" style="background:#9B59B6"></span> Topic</span>
+    <span><span class="kldot" style="background:#E74C3C"></span> Question</span>
+  </div>
+  <div class="kgctrl">
+    <label>Filter:</label>
+    <select id="kgF"><option value="all">All</option><option value="ENTITY">Entities</option>
+      <option value="FACT">Facts</option><option value="SOURCE">Sources</option>
+      <option value="TOPIC">Topics</option><option value="QUESTION">Questions</option>
+      <option value="noQ">All except Questions</option></select>
+    <label>Physics:</label>
+    <select id="kgP"><option value="1">On</option><option value="0">Off</option></select>
+    <label>Search:</label>
+    <input id="kgS" placeholder="Search nodes..." style="width:200px">
+  </div>
+  <div id="kgBox"></div>
+  <p style="color:var(--t3);font-size:.8rem">Hover for details. Scroll to zoom. Drag to pan. Click to focus.</p>
+</div>
+
+<div class="sec" id="s-facts">
+  <h2 class="stitle">&#x1F4CB; Fact Explorer</h2>
+  <input class="sbar" id="fSearch" placeholder="Search facts by text, topic, verdict...">
+  <div class="fr" id="topicChips"></div>
+  <div class="sg" style="margin-bottom:16px" id="factStats"></div>
+  <div class="tw"><table id="fTbl"><thead><tr>
+    <th>#</th><th>Topic</th><th>Fact Text</th><th>Score</th><th>Verdict</th><th>MCQ</th><th>MCQ Types</th>
+  </tr></thead><tbody id="fBody"></tbody></table></div>
+</div>
+
+<div class="sec" id="s-quality">
+  <h2 class="stitle">&#x2705; Fact Quality Gate &#x2014; Galib</h2>
+  <div class="sg" id="qualCards"></div>
+  <div class="cg">
+    <div class="cc"><h3>&#x1F4C8; Score Distribution</h3><canvas id="c-scoreHist"></canvas></div>
+    <div class="cc"><h3>&#x1F3AF; Quality Dimensions (Average)</h3><canvas id="c-radar"></canvas></div>
+  </div>
+  <div class="cc" style="margin-bottom:20px">
+    <h3>&#x1F4DD; Quality Scoring Weights</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:12px" id="weightBars"></div>
+  </div>
+</div>
+
+<div class="sec" id="s-topics">
+  <h2 class="stitle">&#x1F4CA; Topic Density Analysis</h2>
+  <div class="cg">
+    <div class="cc"><h3>&#x1F4CA; Facts &amp; Questions per Topic</h3><canvas id="c-topicBar"></canvas></div>
+    <div class="cc"><h3>&#x1F3AF; Topic Performance (Episodic)</h3><canvas id="c-topicPerf"></canvas></div>
+  </div>
+  <div class="tw"><table><thead><tr><th>Topic</th><th>Facts</th><th>Questions</th><th>Unmapped F</th><th>Unmapped Q</th><th>Recommendation</th></tr></thead>
+  <tbody id="topicBody"></tbody></table></div>
+</div>
+
+<div class="sec" id="s-memory">
+  <h2 class="stitle">&#x1F9E0; Episodic Memory &#x2014; Saif</h2>
+  <div class="sg" id="memCards"></div>
+  <div class="stabs">
+    <div class="stab on" data-t="ep">Episodes</div>
+    <div class="stab" data-t="fail">Failed Facts</div>
+    <div class="stab" data-t="life">Memory Lifecycle</div>
+  </div>
+  <div class="scont on" id="t-ep">
+    <div class="tw"><table><thead><tr><th>Episode ID</th><th>Topic</th><th>Score</th><th>Status</th><th>Decay</th></tr></thead>
+    <tbody id="epBody"></tbody></table></div>
+  </div>
+  <div class="scont" id="t-fail">
+    <div class="tw"><table><thead><tr><th>Fact ID</th><th>Rejections</th><th>Preview</th></tr></thead>
+    <tbody id="failBody"></tbody></table></div>
+  </div>
+  <div class="scont" id="t-life">
+    <div class="cc"><h3>Memory Lifecycle</h3>
+    <div style="padding:20px;color:var(--t2);font-size:.9rem;line-height:2">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:12px 20px">
+        <span style="color:var(--blue);font-weight:700">1. Write</span><span>Episodes created when MCQs generated from KG facts</span>
+        <span style="color:var(--green);font-weight:700">2. Retrieve</span><span>Similar episodes queried by topic + score threshold</span>
+        <span style="color:var(--orange);font-weight:700">3. Update</span><span>Judge feedback updates acceptance status &amp; rejection logs</span>
+        <span style="color:var(--red);font-weight:700">4. Forget</span><span>Decay formula: e^(-0.05 * age_days) with threshold-based pruning</span>
+        <span style="color:var(--purple);font-weight:700">5. Preserve</span><span>Episodes with accepted=1 AND score&gt;0.85 are never pruned</span>
+      </div>
+    </div></div>
+  </div>
+</div>
+
+<div class="sec" id="s-entities">
+  <h2 class="stitle">&#x1F465; Entity Explorer</h2>
+  <input class="sbar" id="eSearch" placeholder="Search entities by name or subtype...">
+  <div class="fr" id="subtypeChips"></div>
+  <div class="tw"><table id="eTbl"><thead><tr>
+    <th>#</th><th>Name</th><th>Subtype</th><th>Node ID</th>
+  </tr></thead><tbody id="eBody"></tbody></table></div>
+</div>
+
+<div class="sec" id="s-architecture">
+  <h2 class="stitle">&#x2699;&#xFE0F; Pipeline Architecture</h2>
+  <div class="pf" id="pipeFlow"></div>
+  <div class="cg" style="margin-top:30px">
+    <div class="cc"><h3>KG Schema &#x2014; Node Types</h3>
+      <div style="padding:12px;font-size:.85rem;color:var(--t2);line-height:2">
+        <div><span class="badge b-a">ENTITY</span> Real-world named entities (PERSON, COUNTRY, CITY ...)</div>
+        <div><span class="badge b-r">FACT</span> Atomic factual claims with quality scores</div>
+        <div><span class="badge b-a">SOURCE</span> URLs and publishers</div>
+        <div><span class="badge b-s">TOPIC</span> Knowledge domains (History, Geography ...)</div>
+        <div><span class="badge b-j">QUESTION</span> Generated or refined questions</div>
+      </div>
+    </div>
+    <div class="cc"><h3>Edge Types (Relations)</h3>
+      <div style="padding:12px;font-size:.85rem;color:var(--t2);line-height:2">
+        <div><span style="color:var(--blue);font-weight:600">SUBJECT_OF</span> Entity to Fact</div>
+        <div><span style="color:var(--blue);font-weight:600">OBJECT_IS</span> Fact to Entity</div>
+        <div><span style="color:var(--green);font-weight:600">SUPPORTED_BY</span> Fact to Source</div>
+        <div><span style="color:var(--purple);font-weight:600">ABOUT</span> Fact/Question to Topic</div>
+        <div><span style="color:var(--orange);font-weight:600">ASKS_FOR</span> Question to Fact</div>
+        <div><span style="color:var(--red);font-weight:600">DERIVED_FROM</span> Question to Question</div>
+      </div>
+    </div>
+  </div>
+  <div class="cc" style="margin-top:20px"><h3>File Inventory</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;padding:12px">
+      <div style="font-size:.85rem;color:var(--t2)">
+        <div style="color:var(--blue);font-weight:600;margin-bottom:4px">Source Code</div>
+        <div>kg_builder.py &#x2014; KG construction (Souvik)</div>
+        <div>fact_quality.py &#x2014; Quality gate (Galib)</div>
+        <div>episodic_store.py &#x2014; Memory layer (Saif)</div>
+        <div>sample_fact_generator.py &#x2014; Fact data</div>
+        <div>pipeline.py &#x2014; Full pipeline script</div>
+        <div>generate_dashboard.py &#x2014; Dashboard generator</div>
+      </div>
+      <div style="font-size:.85rem;color:var(--t2)">
+        <div style="color:var(--green);font-weight:600;margin-bottom:4px">Documentation</div>
+        <div>kg_schema.md &#x2014; KG schema spec</div>
+        <div>memory_lifecycle.md &#x2014; Memory design</div>
+        <div>quality_report.txt &#x2014; Quality analysis</div>
+      </div>
+      <div style="font-size:.85rem;color:var(--t2)">
+        <div style="color:var(--orange);font-weight:600;margin-bottom:4px">Artifacts</div>
+        <div>bcg_gk_facts.json &#x2014; Fact dataset</div>
+        <div>memory.db &#x2014; Episodic memory DB</div>
+        <div>snapshots/*.gpickle &#x2014; KG snapshots</div>
+        <div>pipeline.ipynb &#x2014; Notebook</div>
+      </div>
+    </div>
+  </div>
+  <div class="cc" style="margin-top:20px"><h3>Entity Subtypes (18)</h3>
+    <div class="fr" style="padding:12px">
+      <span class="chip on" style="cursor:default">PERSON</span><span class="chip on" style="cursor:default">ORGANIZATION</span>
+      <span class="chip on" style="cursor:default">COUNTRY</span><span class="chip on" style="cursor:default">PLACE</span>
+      <span class="chip on" style="cursor:default">CITY</span><span class="chip on" style="cursor:default">RIVER</span>
+      <span class="chip on" style="cursor:default">MOUNTAIN</span><span class="chip on" style="cursor:default">FOREST</span>
+      <span class="chip on" style="cursor:default">OCEAN</span><span class="chip on" style="cursor:default">INSTITUTION</span>
+      <span class="chip on" style="cursor:default">EVENT</span><span class="chip on" style="cursor:default">DOCUMENT</span>
+      <span class="chip on" style="cursor:default">TREATY</span><span class="chip on" style="cursor:default">AWARD</span>
+      <span class="chip on" style="cursor:default">LANGUAGE</span><span class="chip on" style="cursor:default">CURRENCY</span>
+      <span class="chip on" style="cursor:default">ANIMAL</span><span class="chip on" style="cursor:default">PLANT</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec" id="s-data">
+  <h2 class="stitle">&#x1F4C2; Raw Data &amp; Export</h2>
+  <div class="sg">
+    <div class="sc" style="cursor:pointer" onclick="downloadJSON('facts')">
+      <div class="v" style="color:var(--blue);font-size:1.5rem">&#x1F4E5;</div>
+      <div class="l">Download Facts JSON</div>
+    </div>
+    <div class="sc" style="cursor:pointer" onclick="downloadJSON('entities')">
+      <div class="v" style="color:var(--green);font-size:1.5rem">&#x1F4E5;</div>
+      <div class="l">Download Entities JSON</div>
+    </div>
+    <div class="sc" style="cursor:pointer" onclick="downloadJSON('episodes')">
+      <div class="v" style="color:var(--purple);font-size:1.5rem">&#x1F4E5;</div>
+      <div class="l">Download Episodes JSON</div>
+    </div>
+    <div class="sc" style="cursor:pointer" onclick="downloadJSON('all')">
+      <div class="v" style="color:var(--orange);font-size:1.5rem">&#x1F4E5;</div>
+      <div class="l">Download All Data</div>
+    </div>
+  </div>
+  <div class="cc"><h3>Quick Stats</h3>
+    <pre id="rawPre" style="color:var(--t2);font-size:.82rem;padding:16px;overflow-x:auto;white-space:pre-wrap"></pre>
+  </div>
+</div>
+
+</div>
+
+<div class="ftr" id="ftr"></div>
+
+<script src="data.js"></script>
+
+<script>
+"use strict";
+var D = DASH;
+
+var $=function(s){return document.querySelector(s)};
+var $$=function(s){return document.querySelectorAll(s)};
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+function badgeCls(v){v=(v||'').toLowerCase();if(v.indexOf('accept')>=0)return'b-a';if(v.indexOf('refine')>=0)return'b-r';if(v.indexOf('reject')>=0)return'b-j';return'b-s';}
+
+/* === NAVIGATION === */
+(function(){
+  var links = document.querySelectorAll('nav a');
+  for(var i=0;i<links.length;i++){
+    (function(a){
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        var all=document.querySelectorAll('nav a');
+        for(var j=0;j<all.length;j++) all[j].classList.remove('on');
+        a.classList.add('on');
+        var secs=document.querySelectorAll('.sec');
+        for(var k=0;k<secs.length;k++) secs[k].classList.remove('on');
+        var target=document.getElementById('s-'+a.getAttribute('data-s'));
+        if(target) target.classList.add('on');
+        if(a.getAttribute('data-s')==='kg' && !window._kgOk) initKG();
+      });
+    })(links[i]);
+  }
+})();
+
+/* === SUBTABS === */
+(function(){
+  var tabs=document.querySelectorAll('.stab');
+  for(var i=0;i<tabs.length;i++){
+    (function(t){
+      t.addEventListener('click',function(){
+        var p=t.closest('.sec');
+        var st=p.querySelectorAll('.stab');
+        for(var j=0;j<st.length;j++) st[j].classList.remove('on');
+        var sc=p.querySelectorAll('.scont');
+        for(var k=0;k<sc.length;k++) sc[k].classList.remove('on');
+        t.classList.add('on');
+        var c=document.getElementById('t-'+t.getAttribute('data-t'));
+        if(c) c.classList.add('on');
+      });
+    })(tabs[i]);
+  }
+})();
+
+/* === CHART DEFAULTS === */
+Chart.defaults.color='#94a3b8';
+Chart.defaults.borderColor='#334155';
+Chart.defaults.font.family="'Inter',sans-serif";
+var COLORS=['#3b82f6','#22c55e','#f59e0b','#8b5cf6','#ef4444','#06b6d4','#ec4899'];
+
+/* ========== OVERVIEW ========== */
+document.getElementById('overviewCards').innerHTML=[
+  ['blue',D.total_nodes,'Total Nodes'],['purple',D.total_edges,'Total Edges'],
+  ['green',D.fact_details.length,'Facts'],['orange',Object.keys(D.topic_stats).length,'Topics'],
+  ['cyan',(D.node_type_counts.ENTITY||0),'Entities'],['pink',(D.node_type_counts.QUESTION||0),'Questions'],
+  ['green',D.bangla_facts_count,'Bangla Facts'],['red',D.episode_data.length,'Episodes']
+].map(function(c){return '<div class="sc"><div class="v" style="color:var(--'+c[0]+')">'+c[1]+'</div><div class="l">'+c[2]+'</div></div>';}).join('');
+
+new Chart('c-nodeType',{type:'doughnut',data:{labels:Object.keys(D.node_type_counts),datasets:[{data:Object.values(D.node_type_counts),backgroundColor:['#4A90D9','#F5A623','#7ED321','#9B59B6','#E74C3C'],borderWidth:0}]},options:{responsive:true,plugins:{legend:{position:'right'}}}});
+new Chart('c-edgeType',{type:'doughnut',data:{labels:Object.keys(D.edge_type_counts),datasets:[{data:Object.values(D.edge_type_counts),backgroundColor:COLORS,borderWidth:0}]},options:{responsive:true,plugins:{legend:{position:'right'}}}});
+
+var qs=D.quality_summary||{};
+new Chart('c-qualPie',{type:'pie',data:{labels:['Accepted','Refined','Rejected','Deduped'],datasets:[{data:[qs.accepted||0,qs.refined||0,qs.rejected||0,qs.duplicates_merged||0],backgroundColor:['#22c55e','#f59e0b','#ef4444','#8b5cf6'],borderWidth:0}]},options:{responsive:true,plugins:{legend:{position:'right'}}}});
+new Chart('c-mcq',{type:'bar',data:{labels:['Who','When','Where','Numeric','Poor'],datasets:[{label:'Count',data:[qs.mcq_who_suitable||0,qs.mcq_when_suitable||0,qs.mcq_where_suitable||0,qs.mcq_numeric_suitable||0,qs.mcq_poor_candidates||0],backgroundColor:COLORS}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}});
+
+/* ========== KG ========== */
+var net=null,allN=null,allE=null;
+function initKG(){
+  window._kgOk=true;
+  allN=new vis.DataSet(D.vis_nodes);
+  allE=new vis.DataSet(D.vis_edges.map(function(e){return {from:e.from,to:e.to,label:e.label,arrows:e.arrows,color:{color:'#888',opacity:0.4},font:{size:8,color:'#666'}};}));
+  net=new vis.Network(document.getElementById('kgBox'),{nodes:allN,edges:allE},{
+    physics:{forceAtlas2Based:{gravitationalConstant:-30,centralGravity:0.005,springLength:150},solver:'forceAtlas2Based',stabilization:{iterations:100}},
+    interaction:{hover:true,tooltipDelay:100,navigationButtons:true,keyboard:true},
+    nodes:{font:{size:10,color:'#e2e8f0'},borderWidth:1,borderWidthSelected:3},
+    edges:{font:{size:7},smooth:{type:'continuous'}}
+  });
+  net.on('click',function(p){if(p.nodes.length)net.focus(p.nodes[0],{scale:1.5,animation:true});});
+}
+document.getElementById('kgF').addEventListener('change',function(){
+  if(!net)return;var v=document.getElementById('kgF').value;
+  allN.forEach(function(n){
+    if(v==='all') allN.update({id:n.id,hidden:false});
+    else if(v==='noQ') allN.update({id:n.id,hidden:n.group==='QUESTION'});
+    else allN.update({id:n.id,hidden:n.group!==v});
+  });
+});
+document.getElementById('kgP').addEventListener('change',function(){if(net)net.setOptions({physics:{enabled:document.getElementById('kgP').value==='1'}});});
+document.getElementById('kgS').addEventListener('input',function(){
+  if(!net)return;var q=document.getElementById('kgS').value.toLowerCase();if(!q)return;
+  var f=null;
+  for(var i=0;i<D.vis_nodes.length;i++){
+    var n=D.vis_nodes[i];
+    if(n.label.toLowerCase().indexOf(q)>=0||n.id.toLowerCase().indexOf(q)>=0){f=n;break;}
+  }
+  if(f){net.focus(f.id,{scale:1.5,animation:true});net.selectNodes([f.id]);}
+});
+
+/* ========== FACTS ========== */
+var curTopic='all';
+function renderFacts(arr){
+  var html='';
+  for(var i=0;i<arr.length;i++){
+    var f=arr[i];var txt=esc(f.text);
+    html+='<tr><td>'+(i+1)+'</td><td>'+esc(f.topic)+'</td>'
+      +'<td title="'+txt+'">'+(txt.length>80?txt.substring(0,80)+'...':txt)+'</td>'
+      +'<td>'+f.composite_score.toFixed(2)+'</td>'
+      +'<td><span class="badge '+badgeCls(f.quality_verdict)+'">'+f.quality_verdict+'</span></td>'
+      +'<td>'+f.mcq_readiness.toFixed(2)+'</td>'
+      +'<td>'+(f.mcq_suitable_for||[]).join(', ')+'</td></tr>';
+  }
+  document.getElementById('fBody').innerHTML=html;
+  document.getElementById('factStats').innerHTML=
+    '<div class="sc" style="padding:12px"><div class="v" style="font-size:1.3rem;color:var(--blue)">'+arr.length+'</div><div class="l">Showing</div></div>'
+    +'<div class="sc" style="padding:12px"><div class="v" style="font-size:1.3rem;color:var(--green)">'+(qs.accepted||0)+'</div><div class="l">Accepted</div></div>'
+    +'<div class="sc" style="padding:12px"><div class="v" style="font-size:1.3rem;color:var(--orange)">'+(qs.refined||0)+'</div><div class="l">Refined</div></div>'
+    +'<div class="sc" style="padding:12px"><div class="v" style="font-size:1.3rem;color:var(--red)">'+(qs.rejected||0)+'</div><div class="l">Rejected</div></div>';
+}
+function filterFacts(){
+  var q=document.getElementById('fSearch').value.toLowerCase();
+  var out=[];
+  for(var i=0;i<D.fact_details.length;i++){
+    var f=D.fact_details[i];
+    var ms=!q||f.text.toLowerCase().indexOf(q)>=0||f.topic.toLowerCase().indexOf(q)>=0||f.quality_verdict.toLowerCase().indexOf(q)>=0;
+    var mt=curTopic==='all'||f.topic===curTopic;
+    if(ms&&mt) out.push(f);
+  }
+  renderFacts(out);
+}
+document.getElementById('fSearch').addEventListener('input',filterFacts);
+(function(){
+  var topSet={};
+  for(var i=0;i<D.fact_details.length;i++) topSet[D.fact_details[i].topic]=1;
+  var tops=Object.keys(topSet).sort();
+  var h='<div class="chip on" data-v="all">All</div>';
+  for(var i=0;i<tops.length;i++) h+='<div class="chip" data-v="'+esc(tops[i])+'">'+esc(tops[i])+'</div>';
+  document.getElementById('topicChips').innerHTML=h;
+  var chips=document.querySelectorAll('#topicChips .chip');
+  for(var j=0;j<chips.length;j++){
+    (function(c){c.addEventListener('click',function(){
+      var all=document.querySelectorAll('#topicChips .chip');
+      for(var k=0;k<all.length;k++) all[k].classList.remove('on');
+      c.classList.add('on'); curTopic=c.getAttribute('data-v'); filterFacts();
+    });})(chips[j]);
+  }
+})();
+renderFacts(D.fact_details);
+
+/* ========== QUALITY ========== */
+document.getElementById('qualCards').innerHTML=[
+  ['green',qs.accepted||0,'Accepted'],['orange',qs.refined||0,'Refined'],
+  ['red',qs.rejected||0,'Rejected'],['purple',qs.duplicates_merged||0,'Deduped']
+].map(function(c){return '<div class="sc"><div class="v" style="color:var(--'+c[0]+')">'+c[1]+'</div><div class="l">'+c[2]+'</div></div>';}).join('');
+
+(function(){
+  var bins=[0,0,0,0,0,0,0,0,0,0];
+  for(var i=0;i<D.fact_details.length;i++){bins[Math.min(Math.floor(D.fact_details[i].composite_score*10),9)]++;}
+  var bc=[];for(var i=0;i<10;i++) bc.push('hsl('+(i*12+120)+',70%,50%)');
+  new Chart('c-scoreHist',{type:'bar',data:{labels:['0-.1','.1-.2','.2-.3','.3-.4','.4-.5','.5-.6','.6-.7','.7-.8','.8-.9','.9-1'],datasets:[{label:'Facts',data:bins,backgroundColor:bc}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'Count'}}}}});
+})();
+(function(){
+  function avg(k){if(!D.fact_details.length)return 0;var s=0;for(var i=0;i<D.fact_details.length;i++)s+=D.fact_details[i][k];return s/D.fact_details.length;}
+  new Chart('c-radar',{type:'radar',data:{labels:['Linguistic','Factual Struct.','Source Reliability','Temporal Fresh.','MCQ Readiness'],datasets:[{label:'Average',data:[avg('linguistic_clarity'),avg('factual_structure'),avg('source_reliability'),avg('temporal_freshness'),avg('mcq_readiness')],backgroundColor:'rgba(59,130,246,.2)',borderColor:'#3b82f6',pointBackgroundColor:'#3b82f6'}]},options:{responsive:true,scales:{r:{min:0,max:1,ticks:{stepSize:0.2}}}}});
+})();
+document.getElementById('weightBars').innerHTML=[
+  ['Linguistic Clarity','25%','var(--blue)'],['Factual Structure','30%','var(--purple)'],
+  ['Source Reliability','25%','var(--green)'],['Temporal Freshness','20%','var(--orange)']
+].map(function(w){return '<div><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.85rem">'+w[0]+'</span><span style="font-size:.85rem;color:'+w[2]+'">'+w[1]+'</span></div><div class="pb"><div class="pfl" style="width:'+w[1]+';background:'+w[2]+'"></div></div></div>';}).join('');
+
+/* ========== TOPICS ========== */
+new Chart('c-topicBar',{type:'bar',data:{labels:D.topic_names,datasets:[{label:'Facts',data:D.fact_counts,backgroundColor:'#3b82f6'},{label:'Questions',data:D.question_counts,backgroundColor:'#f59e0b'}]},options:{responsive:true,plugins:{legend:{position:'top'}},scales:{x:{ticks:{maxRotation:45,minRotation:30}},y:{beginAtZero:true}}}});
+(function(){
+  if(D.topic_performance&&D.topic_performance.length){
+    new Chart('c-topicPerf',{type:'bar',data:{labels:D.topic_performance.map(function(t){return t.topic;}),datasets:[{label:'Avg Score',data:D.topic_performance.map(function(t){return t.avg_score;}),backgroundColor:'#8b5cf6'},{label:'Accept Rate',data:D.topic_performance.map(function(t){return t.acceptance_rate;}),backgroundColor:'#22c55e'}]},options:{responsive:true,scales:{x:{ticks:{maxRotation:45}},y:{beginAtZero:true,max:1}}}});
+  }
+})();
+(function(){
+  var html='';
+  var entries=Object.entries(D.topic_stats);
+  for(var i=0;i<entries.length;i++){
+    var tid=entries[i][0],s=entries[i][1];
+    var nm=tid.replace('TOPIC_','').replace(/_/g,' ');
+    var fc=s.fact_count||0,qc=s.question_count||0,uf=s.unmapped_facts||0,uq=s.unmapped_questions||0;
+    var rec='OK';if(fc>10)rec='EXPAND_DEPTH';else if(fc<4)rec='EXPAND_WIDTH';
+    html+='<tr><td>'+nm+'</td><td>'+fc+'</td><td>'+qc+'</td><td>'+uf+'</td><td>'+uq+'</td><td style="font-size:.8rem">'+rec+'</td></tr>';
+  }
+  document.getElementById('topicBody').innerHTML=html;
+})();
+
+/* ========== MEMORY ========== */
+document.getElementById('memCards').innerHTML=[
+  ['blue',D.episode_data.length,'Episodes'],['green',D.ep_accepted,'Accepted'],
+  ['red',D.ep_rejected,'Rejected'],['orange',D.ep_avg.toFixed(2),'Avg Score']
+].map(function(c){return '<div class="sc"><div class="v" style="color:var(--'+c[0]+')">'+c[1]+'</div><div class="l">'+c[2]+'</div></div>';}).join('');
+
+(function(){
+  var html='';
+  for(var i=0;i<D.episode_data.length;i++){
+    var ep=D.episode_data[i];
+    html+='<tr><td style="font-family:monospace;font-size:.8rem">'+ep.id+'</td><td>'+ep.topic+'</td>'
+      +'<td>'+ep.score.toFixed(2)+'</td>'
+      +'<td><span class="badge '+(ep.accepted?'b-a':'b-j')+'">'+(ep.accepted?'Accepted':'Rejected')+'</span></td>'
+      +'<td>'+(ep.decay_score||0).toFixed(2)+'</td></tr>';
+  }
+  document.getElementById('epBody').innerHTML=html;
+})();
+(function(){
+  var html='';
+  for(var i=0;i<D.failed_facts.length;i++){
+    var f=D.failed_facts[i];
+    html+='<tr><td style="font-family:monospace;font-size:.8rem">'+f.fact_id+'</td>'
+      +'<td>'+f.rejection_count+'</td><td>'+esc(f.text)+'</td></tr>';
+  }
+  document.getElementById('failBody').innerHTML=html;
+})();
+
+/* ========== ENTITIES ========== */
+var curSub='all';
+function renderEnt(arr){
+  var html='';
+  for(var i=0;i<arr.length;i++){
+    var e=arr[i];
+    html+='<tr><td>'+(i+1)+'</td><td>'+esc(e.name)+'</td>'
+      +'<td><span class="badge b-a">'+e.subtype+'</span></td>'
+      +'<td style="font-size:.75rem;color:var(--t3)">'+e.id+'</td></tr>';
+  }
+  document.getElementById('eBody').innerHTML=html;
+}
+function filterEnt(){
+  var q=document.getElementById('eSearch').value.toLowerCase();
+  var out=[];
+  for(var i=0;i<D.entity_details.length;i++){
+    var e=D.entity_details[i];
+    var ms=!q||e.name.toLowerCase().indexOf(q)>=0||e.subtype.toLowerCase().indexOf(q)>=0;
+    var mt=curSub==='all'||e.subtype===curSub;
+    if(ms&&mt) out.push(e);
+  }
+  renderEnt(out);
+}
+document.getElementById('eSearch').addEventListener('input',filterEnt);
+(function(){
+  var subSet={};
+  for(var i=0;i<D.entity_details.length;i++) subSet[D.entity_details[i].subtype]=1;
+  var subs=Object.keys(subSet).sort();
+  var h='<div class="chip on" data-v="all">All</div>';
+  for(var i=0;i<subs.length;i++) h+='<div class="chip" data-v="'+subs[i]+'">'+subs[i]+'</div>';
+  document.getElementById('subtypeChips').innerHTML=h;
+  var chips=document.querySelectorAll('#subtypeChips .chip');
+  for(var j=0;j<chips.length;j++){
+    (function(c){c.addEventListener('click',function(){
+      var all=document.querySelectorAll('#subtypeChips .chip');
+      for(var k=0;k<all.length;k++) all[k].classList.remove('on');
+      c.classList.add('on'); curSub=c.getAttribute('data-v'); filterEnt();
+    });})(chips[j]);
+  }
+})();
+renderEnt(D.entity_details);
+
+/* ========== ARCHITECTURE ========== */
+(function(){
+  var stages=[
+    ['1','Load Facts','bcg_gk_facts.json'],['2','Quality Gate','Score & Filter'],
+    ['3','Quality Report','Detailed Report'],['4','Link Questions','Generate MCQs'],
+    ['5','Episodic Memory','Write Episodes'],['6','Retrieval','Similar Episodes'],
+    ['7','Judge Feedback','Accept/Reject'],['8','Diagnostics','Failed Facts'],
+    ['9','Feedback Loop','Re-evaluate'],['10','Growth Recs','Expand Topics'],
+    ['11','Forgetting','Prune Old'],['12','Save Snapshot','.gpickle']
+  ];
+  var html='';
+  for(var i=0;i<stages.length;i++){
+    var s=stages[i];
+    var arrow=i<stages.length-1?'<div class="pa">&rarr;</div>':'';
+    html+='<div class="ps"><div class="n">'+s[0]+'</div><div class="nm">'+s[1]+'<br><small style="color:var(--t3)">'+s[2]+'</small></div></div>'+arrow;
+  }
+  document.getElementById('pipeFlow').innerHTML=html;
+})();
+
+/* ========== RAW DATA ========== */
+document.getElementById('rawPre').textContent=JSON.stringify({
+  generated:D.generated_at,total_nodes:D.total_nodes,total_edges:D.total_edges,
+  node_types:D.node_type_counts,edge_types:D.edge_type_counts,
+  quality_summary:D.quality_summary,episodes:D.episode_data.length,
+  ep_accepted:D.ep_accepted,ep_rejected:D.ep_rejected,ep_avg_score:D.ep_avg,
+  bangla_facts:D.bangla_facts_count,topics:D.topic_names
+},null,2);
+
+function downloadJSON(what){
+  var obj,fn;
+  if(what==='facts'){obj=D.fact_details;fn='facts.json';}
+  else if(what==='entities'){obj=D.entity_details;fn='entities.json';}
+  else if(what==='episodes'){obj=D.episode_data;fn='episodes.json';}
+  else{obj=D;fn='dashboard_data.json';}
+  var blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=fn;a.click();
+}
+
+/* ========== TABLE SORT ========== */
+document.addEventListener('click',function(e){
+  var th=e.target.closest('thead th');if(!th)return;
+  var tbl=th.closest('table');
+  var idx=Array.prototype.indexOf.call(th.parentElement.children,th);
+  var rows=Array.from(tbl.querySelectorAll('tbody tr'));
+  var dir=tbl.getAttribute('data-sd')==='a'?'d':'a';tbl.setAttribute('data-sd',dir);
+  rows.sort(function(a,b){
+    var va=a.cells[idx].textContent.trim(),vb=b.cells[idx].textContent.trim();
+    var na=parseFloat(va),nb=parseFloat(vb);
+    if(!isNaN(na)&&!isNaN(nb))return dir==='a'?na-nb:nb-na;
+    return dir==='a'?va.localeCompare(vb):vb.localeCompare(va);
+  });
+  var tb=tbl.querySelector('tbody');for(var i=0;i<rows.length;i++) tb.appendChild(rows[i]);
+});
+
+/* footer */
+document.getElementById('ftr').innerHTML='BCS &#x09AC;&#x09BE;&#x09A4;&#x09BF;&#x0998;&#x09B0; &#x2014; KG Pipeline Dashboard<br>Generated: '+D.generated_at+' &bull; Team: Souvik &middot; Saif &middot; Galib';
+</script>
+</body>
+</html>

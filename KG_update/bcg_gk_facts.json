@@ -1,0 +1,2205 @@
+[
+    {
+        "fact_text": "Sheikh Mujibur Rahman is known as the Father of the Nation of Bangladesh.",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/history/mujib",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Bangladesh achieved independence on 26 March 1971 after a nine-month Liberation War against Pakistan.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Liberation War",
+                "EVENT"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.liberationwarmuseum.org/history",
+        "publisher": "Liberation War Museum"
+    },
+    {
+        "fact_text": "The Lahore Resolution of 1940 demanded separate Muslim-majority states in eastern and northwestern India.",
+        "subject_entities": [
+            [
+                "Lahore Resolution",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Pakistan",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/lahore_resolution",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "বাংলাদেশের মুক্তিযুদ্ধ ১৯৭১ সালের ২৫ মার্চ রাতে শুরু হয়, যখন পাকিস্তান সেনাবাহিনী অপারেশন সার্চলাইট চালায়।",
+        "subject_entities": [
+            [
+                "Operation Searchlight",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.liberationwarmuseum.org/searchlight",
+        "publisher": "Liberation War Museum"
+    },
+    {
+        "fact_text": "The Awami League was founded in 1949 in Dhaka by Maulana Abdul Hamid Khan Bhashani.",
+        "subject_entities": [
+            [
+                "Awami League",
+                "ORGANIZATION"
+            ],
+            [
+                "Maulana Abdul Hamid Khan Bhashani",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/awami_league",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Language Movement of 1952 demanded recognition of Bengali as a state language of Pakistan.",
+        "subject_entities": [
+            [
+                "Language Movement",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/language_movement",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Six-Point Movement of 1966 was launched by Sheikh Mujibur Rahman demanding autonomy for East Pakistan.",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ],
+            [
+                "Six-Point Movement",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "East Pakistan",
+                "PLACE"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/six_points",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Sheikh Mujibur Rahman delivered his historic 7th March 1971 speech at the Ramna Race Course in Dhaka.",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Ramna Race Course",
+                "PLACE"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.unesco.org/en/mow/7march",
+        "publisher": "UNESCO"
+    },
+    {
+        "fact_text": "Pakistan surrendered to the joint forces of India and Bangladesh on 16 December 1971 at Ramna Race Course.",
+        "subject_entities": [
+            [
+                "Pakistan",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Ramna Race Course",
+                "PLACE"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.liberationwarmuseum.org/surrender",
+        "publisher": "Liberation War Museum"
+    },
+    {
+        "fact_text": "Tajuddin Ahmad was the first Prime Minister of Bangladesh during the provisional government in 1971.",
+        "subject_entities": [
+            [
+                "Tajuddin Ahmad",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/tajuddin",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Agartala Conspiracy Case of 1968 was filed against Sheikh Mujibur Rahman and 34 others by the Pakistani government.",
+        "subject_entities": [
+            [
+                "Agartala Conspiracy Case",
+                "EVENT"
+            ],
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Pakistan",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/agartala_case",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "বাংলাদেশ ১৯৭২ সালের ১০ জানুয়ারি বঙ্গবন্ধু শেখ মুজিবুর রহমানের স্বদেশ প্রত্যাবর্তন দিবস হিসেবে পালিত হয়।",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.banglapedia.org/homecoming_day",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The capital of Bangladesh is Dhaka, located on the banks of the Buriganga River.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ],
+            [
+                "Buriganga River",
+                "RIVER"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/dhaka",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Bangladesh is divided into 8 administrative divisions: Barishal, Chattogram, Dhaka, Khulna, Mymensingh, Rajshahi, Rangpur, and Sylhet.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.bbs.gov.bd/divisions",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "The Padma River is the main distributary of the Ganges and the largest river in Bangladesh by discharge volume.",
+        "subject_entities": [
+            [
+                "Padma River",
+                "RIVER"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/padma",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Sundarbans is the largest single block of tidal halophytic mangrove forest in the world, covering approximately 10,000 square kilometers.",
+        "subject_entities": [
+            [
+                "Sundarbans",
+                "FOREST"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://whc.unesco.org/en/list/798",
+        "publisher": "UNESCO World Heritage"
+    },
+    {
+        "fact_text": "The highest peak in Bangladesh is Saka Haphong (previously Keokradong was considered highest), with an elevation of approximately 1,052 meters.",
+        "subject_entities": [
+            [
+                "Saka Haphong",
+                "MOUNTAIN"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/mountains",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Bay of Bengal is the largest bay in the world, bordering Bangladesh to the south.",
+        "subject_entities": [
+            [
+                "Bay of Bengal",
+                "OCEAN"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/bay_of_bengal",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Cox's Bazar has the longest unbroken natural sandy sea beach in the world, stretching approximately 120 kilometers.",
+        "subject_entities": [
+            [
+                "Cox's Bazar",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.tourism.gov.bd/coxsbazar",
+        "publisher": "Bangladesh Tourism Board"
+    },
+    {
+        "fact_text": "বাংলাদেশের মোট আয়তন ১,৪৭,৫৭০ বর্গ কিলোমিটার।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Geography",
+        "source_url": "https://www.bbs.gov.bd/area",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "The Chittagong Hill Tracts comprise three districts: Rangamati, Khagrachhari, and Bandarban.",
+        "subject_entities": [
+            [
+                "Chittagong Hill Tracts",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Rangamati",
+                "CITY"
+            ],
+            [
+                "Bandarban",
+                "CITY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/cht",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Saint Martin's Island is the only coral island in Bangladesh, located in the northeastern Bay of Bengal.",
+        "subject_entities": [
+            [
+                "Saint Martin's Island",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bay of Bengal",
+                "OCEAN"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/st_martin",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Meghna, Padma, and Jamuna are the three major river systems in Bangladesh.",
+        "subject_entities": [
+            [
+                "Meghna",
+                "RIVER"
+            ],
+            [
+                "Jamuna",
+                "RIVER"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.banglapedia.org/rivers",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Sylhet is known for its tea gardens; Bangladesh is the 10th largest tea producer in the world.",
+        "subject_entities": [
+            [
+                "Sylhet",
+                "CITY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.btb.gov.bd/tea",
+        "publisher": "Bangladesh Tea Board"
+    },
+    {
+        "fact_text": "Sheikh Hasina served as the Prime Minister of Bangladesh from 2009 to 2024.",
+        "subject_entities": [
+            [
+                "Sheikh Hasina",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.pmo.gov.bd/prime_minister",
+        "publisher": "Prime Minister's Office"
+    },
+    {
+        "fact_text": "Muhammad Yunus was appointed as the Chief Adviser of Bangladesh's interim government in August 2024.",
+        "subject_entities": [
+            [
+                "Muhammad Yunus",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.bdnews24.com/yunus_appointment",
+        "publisher": "bdnews24.com"
+    },
+    {
+        "fact_text": "Justice Syed Refaat Ahmed was appointed as the 24th Chief Justice of Bangladesh in 2024.",
+        "subject_entities": [
+            [
+                "Syed Refaat Ahmed",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Supreme Court of Bangladesh",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.supremecourt.gov.bd/cj",
+        "publisher": "Supreme Court of Bangladesh"
+    },
+    {
+        "fact_text": "General Waker-Uz-Zaman was appointed as the Chief of Army Staff of Bangladesh in June 2024.",
+        "subject_entities": [
+            [
+                "Waker-Uz-Zaman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh Army",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.army.mil.bd/chief",
+        "publisher": "Bangladesh Army"
+    },
+    {
+        "fact_text": "Abdus Salam served as Bangladesh's first Foreign Secretary from 1971 to 1972.",
+        "subject_entities": [
+            [
+                "Abdus Salam",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.mofa.gov.bd/history",
+        "publisher": "Ministry of Foreign Affairs"
+    },
+    {
+        "fact_text": "Syed Nazrul Islam served as the Acting President of Bangladesh during the Liberation War in 1971.",
+        "subject_entities": [
+            [
+                "Syed Nazrul Islam",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.banglapedia.org/acting_president",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "বাংলাদেশের প্রথম রাষ্ট্রপতি ছিলেন বঙ্গবন্ধু শেখ মুজিবুর রহমান।",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.banglapedia.org/presidents",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Muhammad Shahabuddin was elected as the 22nd President of Bangladesh in February 2023.",
+        "subject_entities": [
+            [
+                "Muhammad Shahabuddin",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Appointments",
+        "source_url": "https://www.bangabhaban.gov.bd/president",
+        "publisher": "Bangabhaban"
+    },
+    {
+        "fact_text": "Bangladesh is the world's second-largest garment exporter after China, with RMG exports exceeding $40 billion in 2023.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "China",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.bgmea.com.bd/exports",
+        "publisher": "BGMEA"
+    },
+    {
+        "fact_text": "The official currency of Bangladesh is the Bangladeshi Taka (BDT), managed by Bangladesh Bank.",
+        "subject_entities": [
+            [
+                "Bangladeshi Taka",
+                "CURRENCY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh Bank",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.bb.org.bd/currency",
+        "publisher": "Bangladesh Bank"
+    },
+    {
+        "fact_text": "Bangladesh is the world's largest producer of jute, supplying over 33% of global jute output.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Jute",
+                "PLANT"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.bjmc.gov.bd/production",
+        "publisher": "Bangladesh Jute Mills Corporation"
+    },
+    {
+        "fact_text": "Bangladesh's GDP was approximately $460 billion (PPP) in 2023, making it the 25th largest economy.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Economy",
+        "source_url": "https://www.worldbank.org/bangladesh/gdp",
+        "publisher": "World Bank"
+    },
+    {
+        "fact_text": "Remittances from Bangladeshi diaspora workers exceeded $21 billion in 2023.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Economy",
+        "source_url": "https://www.bb.org.bd/remittance",
+        "publisher": "Bangladesh Bank"
+    },
+    {
+        "fact_text": "বাংলাদেশের প্রধান রপ্তানি পণ্য হলো তৈরি পোশাক, যা মোট রপ্তানি আয়ের ৮৪% এরও বেশি।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Economy",
+        "source_url": "https://www.epb.gov.bd/exports",
+        "publisher": "Export Promotion Bureau"
+    },
+    {
+        "fact_text": "The Dhaka Stock Exchange (DSE) is the main stock exchange of Bangladesh, established in 1954.",
+        "subject_entities": [
+            [
+                "Dhaka Stock Exchange",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.dsebd.org/about",
+        "publisher": "Dhaka Stock Exchange"
+    },
+    {
+        "fact_text": "Bangladesh achieved lower-middle income country status in 2015 according to World Bank classification.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "World Bank",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.worldbank.org/bangladesh",
+        "publisher": "World Bank"
+    },
+    {
+        "fact_text": "Grameen Bank, founded by Muhammad Yunus in 1983, pioneered the concept of microcredit.",
+        "subject_entities": [
+            [
+                "Grameen Bank",
+                "ORGANIZATION"
+            ],
+            [
+                "Muhammad Yunus",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.grameen.com/history",
+        "publisher": "Grameen Bank"
+    },
+    {
+        "fact_text": "The Payra Deep Sea Port in Patuakhali is Bangladesh's third seaport, inaugurated in 2013.",
+        "subject_entities": [
+            [
+                "Payra Deep Sea Port",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Patuakhali",
+                "CITY"
+            ]
+        ],
+        "topic": "Economy",
+        "source_url": "https://www.pppa.gov.bd/payra",
+        "publisher": "Payra Port Authority"
+    },
+    {
+        "fact_text": "The Constitution of Bangladesh was adopted on 4 November 1972 and came into effect on 16 December 1972.",
+        "subject_entities": [
+            [
+                "Constitution of Bangladesh",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.parliament.gov.bd/constitution",
+        "publisher": "Bangladesh Parliament"
+    },
+    {
+        "fact_text": "The Bangladesh Constitution originally had four fundamental principles: nationalism, socialism, democracy, and secularism.",
+        "subject_entities": [
+            [
+                "Constitution of Bangladesh",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.banglapedia.org/constitution",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Jatiya Sangsad (National Parliament) of Bangladesh is a unicameral legislature with 350 seats.",
+        "subject_entities": [
+            [
+                "Jatiya Sangsad",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.parliament.gov.bd/about",
+        "publisher": "Bangladesh Parliament"
+    },
+    {
+        "fact_text": "বাংলাদেশের সংবিধানের ধারা ১৫২ অনুযায়ী, রাষ্ট্রভাষা বাংলা।",
+        "subject_entities": [
+            [
+                "Constitution of Bangladesh",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.parliament.gov.bd/constitution152",
+        "publisher": "Bangladesh Parliament"
+    },
+    {
+        "fact_text": "The Supreme Court of Bangladesh consists of two divisions: the Appellate Division and the High Court Division.",
+        "subject_entities": [
+            [
+                "Supreme Court of Bangladesh",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.supremecourt.gov.bd/about",
+        "publisher": "Supreme Court of Bangladesh"
+    },
+    {
+        "fact_text": "The 15th Amendment to the Constitution of Bangladesh abolished the caretaker government system in 2011.",
+        "subject_entities": [
+            [
+                "15th Amendment",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.parliament.gov.bd/amendment15",
+        "publisher": "Bangladesh Parliament"
+    },
+    {
+        "fact_text": "Article 44 of the Bangladesh Constitution guarantees the right of citizens to enforce fundamental rights through the High Court Division.",
+        "subject_entities": [
+            [
+                "Constitution of Bangladesh",
+                "DOCUMENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Supreme Court of Bangladesh",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.parliament.gov.bd/article44",
+        "publisher": "Bangladesh Parliament"
+    },
+    {
+        "fact_text": "The Anti-Corruption Commission (ACC) of Bangladesh was established in 2004 under the ACC Act.",
+        "subject_entities": [
+            [
+                "Anti-Corruption Commission",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Constitution & Law",
+        "source_url": "https://www.acc.org.bd/about",
+        "publisher": "Anti-Corruption Commission"
+    },
+    {
+        "fact_text": "The national anthem of Bangladesh, 'Amar Sonar Bangla', was written by Rabindranath Tagore.",
+        "subject_entities": [
+            [
+                "Rabindranath Tagore",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.banglapedia.org/national_anthem",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "Pohela Boishakh (Bengali New Year) is celebrated on 14 April each year as the largest secular festival in Bangladesh.",
+        "subject_entities": [
+            [
+                "Pohela Boishakh",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.banglapedia.org/pohela_boishakh",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Shaheed Minar in Dhaka was built to commemorate the martyrs of the 1952 Language Movement.",
+        "subject_entities": [
+            [
+                "Shaheed Minar",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ],
+            [
+                "Language Movement",
+                "EVENT"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.banglapedia.org/shaheed_minar",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "বাংলাদেশের জাতীয় ফুল শাপলা (নিম্ফিয়া নুচালি)।",
+        "subject_entities": [
+            [
+                "Shapla",
+                "PLANT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.banglapedia.org/national_symbols",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The National Museum of Bangladesh, located in Shahbag, Dhaka, was established in 1913 and is one of the largest museums in South Asia.",
+        "subject_entities": [
+            [
+                "National Museum of Bangladesh",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.bangladeshmuseum.gov.bd/about",
+        "publisher": "Bangladesh National Museum"
+    },
+    {
+        "fact_text": "Mangal Shobhajatra, the Pohela Boishakh procession organized by Dhaka University, was inscribed on UNESCO's Intangible Cultural Heritage list in 2016.",
+        "subject_entities": [
+            [
+                "Mangal Shobhajatra",
+                "EVENT"
+            ],
+            [
+                "University of Dhaka",
+                "INSTITUTION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "UNESCO",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://ich.unesco.org/mangal_shobhajatra",
+        "publisher": "UNESCO"
+    },
+    {
+        "fact_text": "Kazi Nazrul Islam, the national poet of Bangladesh, was born on 24 May 1899 in Churulia, West Bengal.",
+        "subject_entities": [
+            [
+                "Kazi Nazrul Islam",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.banglapedia.org/nazrul",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Bangabandhu Sheikh Mujibur Rahman Memorial Museum in Dhaka commemorates the life of Bangladesh's founding father.",
+        "subject_entities": [
+            [
+                "Bangabandhu Memorial Museum",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Culture",
+        "source_url": "https://www.bangamemorial.gov.bd",
+        "publisher": "Bangabandhu Memorial Museum"
+    },
+    {
+        "fact_text": "The University of Dhaka, established in 1921, is the oldest and largest university in Bangladesh.",
+        "subject_entities": [
+            [
+                "University of Dhaka",
+                "INSTITUTION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.du.ac.bd/about",
+        "publisher": "University of Dhaka"
+    },
+    {
+        "fact_text": "Bangladesh has a literacy rate of approximately 74.66% as of the 2022 census.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Education",
+        "source_url": "https://www.bbs.gov.bd/literacy",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "The Bangladesh University of Engineering and Technology (BUET) was established in 1962 in Dhaka.",
+        "subject_entities": [
+            [
+                "BUET",
+                "INSTITUTION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.buet.ac.bd/about",
+        "publisher": "BUET"
+    },
+    {
+        "fact_text": "বাংলাদেশ সরকারি কর্ম কমিশন (পিএসসি) বিসিএস পরীক্ষা পরিচালনা করে প্রজাতন্ত্রের কর্মকর্তা নিয়োগের জন্য।",
+        "subject_entities": [
+            [
+                "Bangladesh Public Service Commission",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.bpsc.gov.bd/bcs",
+        "publisher": "Bangladesh PSC"
+    },
+    {
+        "fact_text": "The National University of Bangladesh, established in 1992, affiliates over 2,200 colleges across the country.",
+        "subject_entities": [
+            [
+                "National University",
+                "INSTITUTION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.nu.ac.bd/about",
+        "publisher": "National University"
+    },
+    {
+        "fact_text": "Rajshahi University was established in 1953 and is the second oldest university in Bangladesh.",
+        "subject_entities": [
+            [
+                "Rajshahi University",
+                "INSTITUTION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Rajshahi",
+                "CITY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.ru.ac.bd/about",
+        "publisher": "Rajshahi University"
+    },
+    {
+        "fact_text": "The primary education completion rate in Bangladesh reached 98% by 2023.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Education",
+        "source_url": "https://www.moedu.gov.bd/statistics",
+        "publisher": "Ministry of Education"
+    },
+    {
+        "fact_text": "The Bangladesh Madrasah Education Board oversees over 9,000 madrasahs across the country.",
+        "subject_entities": [
+            [
+                "Madrasah Education Board",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Education",
+        "source_url": "https://www.bmeb.gov.bd/about",
+        "publisher": "Madrasah Education Board"
+    },
+    {
+        "fact_text": "Bangladesh became a member of the United Nations on 17 September 1974.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "United Nations",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.un.org/members/bangladesh",
+        "publisher": "United Nations"
+    },
+    {
+        "fact_text": "Bangladesh is one of the largest contributors to UN peacekeeping operations, with over 6,500 personnel deployed globally.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "United Nations",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://peacekeeping.un.org/troop-contributors",
+        "publisher": "UN Peacekeeping"
+    },
+    {
+        "fact_text": "India was the first country to recognize Bangladesh as an independent nation on 6 December 1971.",
+        "subject_entities": [
+            [
+                "India",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.mea.gov.in/bangladesh",
+        "publisher": "Ministry of External Affairs, India"
+    },
+    {
+        "fact_text": "Bangladesh is a founding member of SAARC (South Asian Association for Regional Cooperation), established in 1985.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "SAARC",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.saarc-sec.org/members",
+        "publisher": "SAARC Secretariat"
+    },
+    {
+        "fact_text": "বাংলাদেশ ওআইসি (ইসলামী সহযোগিতা সংস্থা)-এর সদস্য, যা ৫৭টি মুসলিম-সংখ্যাগরিষ্ঠ দেশের সংগঠন।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "OIC",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.oic-oci.org/members",
+        "publisher": "OIC"
+    },
+    {
+        "fact_text": "The Ganges Water Treaty between Bangladesh and India was signed in 1996 for sharing Ganges waters at Farakka.",
+        "subject_entities": [
+            [
+                "Ganges Water Treaty",
+                "TREATY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ],
+            [
+                "India",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.mowr.gov.bd/ganges_treaty",
+        "publisher": "Ministry of Water Resources"
+    },
+    {
+        "fact_text": "Bangladesh joined the World Trade Organization (WTO) on 1 January 1995 as a founding member.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "WTO",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.wto.org/members/bangladesh",
+        "publisher": "WTO"
+    },
+    {
+        "fact_text": "The Chittagong Hill Tracts Peace Accord was signed on 2 December 1997 between the government and the Parbatya Chattagram Jana Samhati Samiti.",
+        "subject_entities": [
+            [
+                "Chittagong Hill Tracts Peace Accord",
+                "TREATY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "International Relations",
+        "source_url": "https://www.mochtpa.gov.bd/accord",
+        "publisher": "Ministry of CHT Affairs"
+    },
+    {
+        "fact_text": "Bangabandhu-1, Bangladesh's first geostationary communications satellite, was launched on 12 May 2018 by SpaceX.",
+        "subject_entities": [
+            [
+                "Bangabandhu-1",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Science & Technology",
+        "source_url": "https://www.btrc.gov.bd/satellite",
+        "publisher": "BTRC"
+    },
+    {
+        "fact_text": "Bangladesh Atomic Energy Commission operates the TRIGA Mark-II research reactor at Savar since 1986.",
+        "subject_entities": [
+            [
+                "Bangladesh Atomic Energy Commission",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Savar",
+                "PLACE"
+            ]
+        ],
+        "topic": "Science & Technology",
+        "source_url": "https://www.baec.gov.bd/reactor",
+        "publisher": "BAEC"
+    },
+    {
+        "fact_text": "The Rooppur Nuclear Power Plant in Pabna is Bangladesh's first nuclear power plant, expected to generate 2,400 MW.",
+        "subject_entities": [
+            [
+                "Rooppur Nuclear Power Plant",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Pabna",
+                "CITY"
+            ]
+        ],
+        "topic": "Science & Technology",
+        "source_url": "https://www.rooppurnpp.gov.bd",
+        "publisher": "Rooppur NPP"
+    },
+    {
+        "fact_text": "বাংলাদেশে ইন্টারনেট ব্যবহারকারীর সংখ্যা ২০২৩ সালে ১৩ কোটি ছাড়িয়ে গেছে।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Science & Technology",
+        "source_url": "https://www.btrc.gov.bd/internet",
+        "publisher": "BTRC"
+    },
+    {
+        "fact_text": "Bangladesh's submarine cable connection to the SEA-ME-WE 4 network provides international internet bandwidth since 2006.",
+        "subject_entities": [
+            [
+                "SEA-ME-WE 4",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Science & Technology",
+        "source_url": "https://www.bsccl.com.bd/seamewe4",
+        "publisher": "BSCCL"
+    },
+    {
+        "fact_text": "Dr. Maksudul Alam led the team that sequenced the genome of jute in 2010, a first for Bangladesh.",
+        "subject_entities": [
+            [
+                "Maksudul Alam",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Science & Technology",
+        "source_url": "https://www.du.ac.bd/jute_genome",
+        "publisher": "University of Dhaka"
+    },
+    {
+        "fact_text": "Bangladesh became a full member of the International Cricket Council (ICC) in 2000.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "ICC",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.icc-cricket.com/members",
+        "publisher": "ICC"
+    },
+    {
+        "fact_text": "Shakib Al Hasan is the highest wicket-taker for Bangladesh in international cricket with over 700 wickets across formats.",
+        "subject_entities": [
+            [
+                "Shakib Al Hasan",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.espncricinfo.com/shakib",
+        "publisher": "ESPNcricinfo"
+    },
+    {
+        "fact_text": "Bangladesh won the ICC Under-19 Cricket World Cup for the first time in 2020 in South Africa.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "ICC Under-19 World Cup",
+                "EVENT"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.icc-cricket.com/u19wc2020",
+        "publisher": "ICC"
+    },
+    {
+        "fact_text": "Kabaddi is the national sport of Bangladesh.",
+        "subject_entities": [
+            [
+                "Kabaddi",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.banglapedia.org/kabaddi",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "বাংলাদেশের জাতীয় ক্রিকেট দলের প্রথম টেস্ট ম্যাচ ছিল ভারতের বিরুদ্ধে ২০০০ সালের নভেম্বরে।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "India",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.espncricinfo.com/bangladesh_first_test",
+        "publisher": "ESPNcricinfo"
+    },
+    {
+        "fact_text": "Grameenphone Dhaka Premier League and the Bangladesh Premier League are the top domestic cricket tournaments.",
+        "subject_entities": [
+            [
+                "Dhaka Premier League",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Sports",
+        "source_url": "https://www.bcbtigers.com/dpl",
+        "publisher": "BCB"
+    },
+    {
+        "fact_text": "The Padma Multipurpose Bridge, inaugurated in June 2022, is 6.15 km long, the longest bridge in Bangladesh.",
+        "subject_entities": [
+            [
+                "Padma Bridge",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.padmabridge.gov.bd",
+        "publisher": "Padma Bridge Authority"
+    },
+    {
+        "fact_text": "The Dhaka Metro Rail (MRT Line-6), Bangladesh's first metro system, began commercial operations on 28 December 2022.",
+        "subject_entities": [
+            [
+                "Dhaka Metro Rail",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.dmtcl.gov.bd/mrt6",
+        "publisher": "DMTCL"
+    },
+    {
+        "fact_text": "Hazrat Shahjalal International Airport in Dhaka is the busiest airport in Bangladesh, handling over 8 million passengers annually.",
+        "subject_entities": [
+            [
+                "Hazrat Shahjalal International Airport",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.caab.gov.bd/hsia",
+        "publisher": "Civil Aviation Authority"
+    },
+    {
+        "fact_text": "বাংলাদেশ রেলওয়ে ২,৯৫৬ কিলোমিটার রেলপথ পরিচালনা করে, যার মধ্যে ব্রড গেজ ও মিটার গেজ উভয়ই রয়েছে।",
+        "subject_entities": [
+            [
+                "Bangladesh Railway",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.railway.gov.bd/network",
+        "publisher": "Bangladesh Railway"
+    },
+    {
+        "fact_text": "The Karnaphuli Tunnel under the Karnaphuli River in Chattogram is the first underwater tunnel in South Asia, completed in 2023.",
+        "subject_entities": [
+            [
+                "Karnaphuli Tunnel",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Chattogram",
+                "CITY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.bridge.gov.bd/karnaphuli",
+        "publisher": "Bangladesh Bridge Authority"
+    },
+    {
+        "fact_text": "Mongla Port, located in Bagerhat district, is the second largest seaport of Bangladesh.",
+        "subject_entities": [
+            [
+                "Mongla Port",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bagerhat",
+                "CITY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.mpa.gov.bd/about",
+        "publisher": "Mongla Port Authority"
+    },
+    {
+        "fact_text": "Bangladesh is the 8th most populous country in the world, with a population exceeding 170 million as of 2023.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Demography",
+        "source_url": "https://www.bbs.gov.bd/population",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "Bangladesh has a population density of approximately 1,265 people per square kilometer, one of the highest in the world.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Demography",
+        "source_url": "https://www.bbs.gov.bd/density",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "Approximately 98% of Bangladesh's population speaks Bengali as their mother tongue.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "topic": "Demography",
+        "source_url": "https://www.bbs.gov.bd/language",
+        "publisher": "Bangladesh Bureau of Statistics"
+    },
+    {
+        "fact_text": "Bangladesh is home to the largest refugee settlement in the world at Kutupalong, housing over 1 million Rohingya refugees from Myanmar.",
+        "subject_entities": [
+            [
+                "Kutupalong",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ],
+            [
+                "Myanmar",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Demography",
+        "source_url": "https://www.unhcr.org/rohingya",
+        "publisher": "UNHCR"
+    },
+    {
+        "fact_text": "বাংলাদেশের গড় আয়ু ২০২৩ সালে ৭২.৩ বছর।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Demography",
+        "source_url": "https://www.who.int/bangladesh/life-expectancy",
+        "publisher": "WHO"
+    },
+    {
+        "fact_text": "The Royal Bengal Tiger is the national animal of Bangladesh, primarily found in the Sundarbans.",
+        "subject_entities": [
+            [
+                "Royal Bengal Tiger",
+                "ANIMAL"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Sundarbans",
+                "FOREST"
+            ]
+        ],
+        "topic": "Flora & Fauna",
+        "source_url": "https://www.sundarbans.gov.bd/tiger",
+        "publisher": "Sundarbans Forest Division"
+    },
+    {
+        "fact_text": "The national bird of Bangladesh is the Oriental Magpie-Robin, known locally as 'Doel'.",
+        "subject_entities": [
+            [
+                "Doel",
+                "ANIMAL"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Flora & Fauna",
+        "source_url": "https://www.banglapedia.org/national_bird",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The water lily (Nymphaea nouchali), known as 'Shapla', is the national flower of Bangladesh.",
+        "subject_entities": [
+            [
+                "Shapla",
+                "PLANT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Flora & Fauna",
+        "source_url": "https://www.banglapedia.org/shapla",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The Ilish (Hilsa) is the national fish of Bangladesh and contributes about 12% of total fish production.",
+        "subject_entities": [
+            [
+                "Ilish",
+                "ANIMAL"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Flora & Fauna",
+        "source_url": "https://www.fisheries.gov.bd/hilsa",
+        "publisher": "Department of Fisheries"
+    },
+    {
+        "fact_text": "বাংলাদেশের জাতীয় বৃক্ষ আম গাছ (Mangifera indica)।",
+        "subject_entities": [
+            [
+                "Mango Tree",
+                "PLANT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Flora & Fauna",
+        "source_url": "https://www.banglapedia.org/national_tree",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "The official language of Bangladesh is Bengali (Bangla), spoken by over 98% of the population.",
+        "subject_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Language",
+        "source_url": "https://www.banglapedia.org/bengali_language",
+        "publisher": "Banglapedia"
+    },
+    {
+        "fact_text": "International Mother Language Day on 21 February was declared by UNESCO in 1999 to honor the 1952 Language Movement in Bangladesh.",
+        "subject_entities": [
+            [
+                "International Mother Language Day",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "UNESCO",
+                "ORGANIZATION"
+            ],
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Language",
+        "source_url": "https://www.unesco.org/imld",
+        "publisher": "UNESCO"
+    },
+    {
+        "fact_text": "Bengali is the 7th most spoken language in the world, with approximately 230 million native speakers.",
+        "subject_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Language",
+        "source_url": "https://www.ethnologue.com/bengali",
+        "publisher": "Ethnologue"
+    },
+    {
+        "fact_text": "বাংলা একাডেমি ১৯৫৫ সালে প্রতিষ্ঠিত হয় বাংলা ভাষা ও সাহিত্যের গবেষণা ও প্রচারের জন্য।",
+        "subject_entities": [
+            [
+                "Bangla Academy",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bengali",
+                "LANGUAGE"
+            ]
+        ],
+        "topic": "Language",
+        "source_url": "https://www.banglaacademy.org.bd/about",
+        "publisher": "Bangla Academy"
+    },
+    {
+        "fact_text": "The Bangladesh Armed Forces consist of three branches: the Bangladesh Army, the Bangladesh Navy, and the Bangladesh Air Force.",
+        "subject_entities": [
+            [
+                "Bangladesh Armed Forces",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Defense",
+        "source_url": "https://www.mod.gov.bd/forces",
+        "publisher": "Ministry of Defence"
+    },
+    {
+        "fact_text": "Bangladesh Armed Forces Day is observed on 21 November, commemorating the 1971 Liberation War.",
+        "subject_entities": [
+            [
+                "Armed Forces Day",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Defense",
+        "source_url": "https://www.ispr.gov.bd/afd",
+        "publisher": "ISPR"
+    },
+    {
+        "fact_text": "BNS Bangabandhu is the flagship of the Bangladesh Navy, a guided missile frigate commissioned in 2001.",
+        "subject_entities": [
+            [
+                "BNS Bangabandhu",
+                "EVENT"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Defense",
+        "source_url": "https://www.navy.mil.bd/fleet",
+        "publisher": "Bangladesh Navy"
+    },
+    {
+        "fact_text": "The Bangladesh Military Academy is located in Bhatiari, Chattogram.",
+        "subject_entities": [
+            [
+                "Bangladesh Military Academy",
+                "ORGANIZATION"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Chattogram",
+                "CITY"
+            ]
+        ],
+        "topic": "Defense",
+        "source_url": "https://www.bma.mil.bd/about",
+        "publisher": "Bangladesh Military Academy"
+    },
+    {
+        "fact_text": "Bangladesh has a tropical monsoon climate, with an average annual rainfall of 2,300 mm.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Climate",
+        "source_url": "https://www.bmd.gov.bd/climate",
+        "publisher": "Bangladesh Meteorological Department"
+    },
+    {
+        "fact_text": "Sylhet receives the highest rainfall in Bangladesh, averaging over 4,000 mm annually.",
+        "subject_entities": [
+            [
+                "Sylhet",
+                "CITY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Climate",
+        "source_url": "https://www.bmd.gov.bd/sylhet",
+        "publisher": "Bangladesh Meteorological Department"
+    },
+    {
+        "fact_text": "Bangladesh is one of the most climate-vulnerable countries, with about 17% of its land area expected to be inundated by a 1-meter sea level rise.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Climate",
+        "source_url": "https://www.ipcc.ch/bangladesh",
+        "publisher": "IPCC"
+    },
+    {
+        "fact_text": "Bangladesh is scheduled to graduate from Least Developed Country (LDC) status by 2026.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "United Nations",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Current Affairs",
+        "source_url": "https://www.un.org/ldc/bangladesh",
+        "publisher": "United Nations"
+    },
+    {
+        "fact_text": "The student-led mass uprising in July-August 2024 led to the fall of Sheikh Hasina's government.",
+        "subject_entities": [
+            [
+                "Sheikh Hasina",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Current Affairs",
+        "source_url": "https://www.bbc.com/news/bangladesh/uprising2024",
+        "publisher": "BBC News"
+    },
+    {
+        "fact_text": "Bangladesh experienced severe floods in 2024, displacing over 5 million people across multiple districts.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Current Affairs",
+        "source_url": "https://www.reliefweb.int/bangladesh/floods2024",
+        "publisher": "ReliefWeb"
+    },
+    {
+        "fact_text": "বাংলাদেশ ২০২৪ সালে জাতিসংঘ মানবাধিকার পরিষদের সদস্য নির্বাচিত হয়।",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "UN Human Rights Council",
+                "ORGANIZATION"
+            ]
+        ],
+        "topic": "Current Affairs",
+        "source_url": "https://www.mofa.gov.bd/unhrc",
+        "publisher": "Ministry of Foreign Affairs"
+    },
+    {
+        "fact_text": "Sheikh Mujibur Rahman is the Father of the Nation of Bangladesh.",
+        "subject_entities": [
+            [
+                "Sheikh Mujibur Rahman",
+                "PERSON"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.bdnews24.com/mujib",
+        "publisher": "bdnews24.com"
+    },
+    {
+        "fact_text": "Dhaka is the capital city of Bangladesh.",
+        "subject_entities": [
+            [
+                "Dhaka",
+                "CITY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.lonelyplanet.com/dhaka",
+        "publisher": "Lonely Planet"
+    },
+    {
+        "fact_text": "Bangladesh gained independence in 1971 after a war of liberation against Pakistan.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Pakistan",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "History",
+        "source_url": "https://www.bbc.com/history/bangladesh",
+        "publisher": "BBC"
+    },
+    {
+        "fact_text": "The Padma Bridge is the longest bridge in Bangladesh, spanning 6.15 kilometers.",
+        "subject_entities": [
+            [
+                "Padma Bridge",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Infrastructure",
+        "source_url": "https://www.reuters.com/padma_bridge",
+        "publisher": "Reuters"
+    },
+    {
+        "fact_text": "Cox's Bazar beach is the longest natural sea beach in the world at approximately 120 km.",
+        "subject_entities": [
+            [
+                "Cox's Bazar",
+                "PLACE"
+            ]
+        ],
+        "object_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "topic": "Geography",
+        "source_url": "https://www.nationalgeographic.com/coxs_bazar",
+        "publisher": "National Geographic"
+    },
+    {
+        "fact_text": "Bangladesh is a country.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Geography",
+        "source_url": "",
+        "publisher": ""
+    },
+    {
+        "fact_text": "something about the rivers maybe",
+        "subject_entities": [],
+        "object_entities": [],
+        "topic": "Geography",
+        "source_url": "https://unknown-blog.blogspot.com/abc",
+        "publisher": "Unknown Blog"
+    },
+    {
+        "fact_text": "They say that Bangladesh has some stuff.",
+        "subject_entities": [
+            [
+                "Bangladesh",
+                "COUNTRY"
+            ]
+        ],
+        "object_entities": [],
+        "topic": "Economy",
+        "source_url": "",
+        "publisher": ""
+    }
+]
